@@ -13,7 +13,7 @@ const About = () => {
       <div className="container about__container">
         <div className="about__me">
           <div className="about__me-image">
-            <img src="assets/tom.png" alt="About Image"/>
+            <img src="assets/tom.png" alt="About Image" />
           </div>
         </div>
 
@@ -32,21 +32,23 @@ const About = () => {
             <article className="about__card">
               <VscFolderLibrary className="about__icon" />
               <h5>Projects</h5>
-              <small>80+ Completed</small>
+              <small>10+ Completed</small>
             </article>
           </div>
           <p>
-            In this practical react js project tutorial, I'm going to teach you,
-            step-by-step, how to create and deploy a fully responsive personal
-            portfolio website from scratch! By the end of this video, you will
-            know how to create a react app from scratch, how to use the react
-            icons library in your react projects, how to use react useState
+                        A young, dynamic person seeking challenging positions in
+            the field of Information Technology world where I can learn and grow
+            my skills. I am a mature, positive and hardworking individual, who
+            always strives to achieve the highest standard possible, at any
+            given task. I posses excellent communication skills and I have the
+            ability and experience to relate to a software development for 5
+            year. I enjoy learning new things, I can work very well under
+            pressure.
           </p>
           <a href="#contact" className="btn btn-primary">
             Let's Talk
           </a>
         </div>
-
       </div>
     </section>
   );
