@@ -18,6 +18,12 @@
     overflow: hidden;
     transform-origin: rotate(10deg);
     transition: var(--transition);
+
+    display: inline-block;
+    -webkit-transform: rotate(10deg);
+    -moz-transform: rotate(10deg);
+    -o-transform: rotate(10deg);
+    transform: rotate(10deg);
 }
 
 .about__me-image:hover {
@@ -75,7 +81,7 @@
 
     .about__me {
         width: 50%;
-        margin: 2rem auto 4rem;
+        margin: 2rem auto 6rem;
     }
 
     .about__content p {

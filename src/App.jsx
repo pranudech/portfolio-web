@@ -2,7 +2,7 @@ import React from "react";
 
 import Header from "./components/header/Header";
 import Nav from "./components/nav/Nav";
-import Abount from "./components/about/About";
+import About from "./components/about/About";
 import Experience from "./components/experience/Experience";
 import Service from "./components/service/Service";
 import Portfolio from "./components/portfolio/Portfolio";
@@ -15,7 +15,7 @@ const App = () => {
     <>
       <Header />
       <Nav />
-      <Abount />
+      <About />
       <Experience />
       <Service />
       <Portfolio />
