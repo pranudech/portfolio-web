@@ -4,29 +4,43 @@ import { MdOutlineMail } from "react-icons/md";
 import { GoComment } from "react-icons/go";
 import { AiOutlinePhone } from "react-icons/ai";
 import emailjs from "@emailjs/browser";
+import axios from 'axios'
 
 const Contact = () => {
   const form = useRef();
 
   const sendEmail = (e) => {
-    e.preventDefault();
-    emailjs
-      .sendForm(
-        "service_sok8e88",
-        "template_hpjke5x",
-        form.current,
-        "E-9bLDfRaR3ndrTQm"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          e.traget.reset();
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+    // e.preventDefault();
+    // emailjs
+    //   .sendForm(
+    //     "service_sok8e88",
+    //     "template_hpjke5x",
+    //     form.current,
+    //     "E-9bLDfRaR3ndrTQm"
+    //   )
+    //   .then(
+    //     (result) => {
+    //       console.log(result.text);
+    //       e.traget.reset();
+    //     },
+    //     (error) => {
+    //       console.log(error.text);
+    //     }
+    //   );
+    lineNotify();
   };
+
+  const lineNotify = (text = '') => {
+    console.log('form.current :>> ', form.current.name.value);
+    console.log('form.current :>> ', form.current.email.value);
+    console.log('form.current :>> ', form.current.message.value);
+    // axios.post('http://localhost:3000/api/send_line', {
+      axios.post('/send_line', {
+      text: `\n${form.current.name.value}\n${form.current.email.value}\n${form.current.message.value}`
+    }).then(function (res) {
+      
+    });
+  }
 
   return (
     <section id="contact">
