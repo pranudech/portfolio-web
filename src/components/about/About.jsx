@@ -26,16 +26,16 @@ const About = () => {
               <h5>Experience</h5>
               <small>5+ Years Working</small>
             </article>
-            <article className="about__card">
+            {/* <article className="about__card">
               <FiUsers className="about__icon" />
               <h5>Clients</h5>
               <small>200+ Worldwide</small>
-            </article>
-            <article className="about__card">
+            </article> */}
+            {/* <article className="about__card">
               <VscFolderLibrary className="about__icon" />
               <h5>Projects</h5>
               <small>10+ Completed</small>
-            </article>
+            </article> */}
           </div>
           <p>
                         A young, dynamic person seeking challenging positions in

@@ -17,9 +17,9 @@ const Footer = () => {
         <li><a href='#contact'>Contact</a></li>
       </ul>
       <div className='footer__socials'>
-        <a href='https://www.facebook.com/'><AiFillFacebook/></a>
-        <a href='https://www.instagram.com/'><AiFillInstagram/></a>
-        <a href='https://twitter.com/home?lang=th'><AiFillTwitterSquare/></a>
+        <a href='https://www.facebook.com/' target='_blank'><AiFillFacebook/></a>
+        <a href='https://www.instagram.com/' target='_blank'><AiFillInstagram/></a>
+        <a href='https://twitter.com/home?lang=th' target='_blank'><AiFillTwitterSquare/></a>
       </div>
       <div className='footer__copyright'>
         <small> &copy; 2023 pranudech portfolio. All right reserved</small>
