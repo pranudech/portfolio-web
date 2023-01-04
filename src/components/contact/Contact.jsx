@@ -11,23 +11,23 @@ const Contact = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    // emailjs
-    //   .sendForm(
-    //     "service_sok8e88",
-    //     "template_hpjke5x",
-    //     form.current,
-    //     "E-9bLDfRaR3ndrTQm"
-    //   )
-    //   .then(
-    //     (result) => {
-    //       console.log(result.text);
-    //       e.traget.reset();
-    //     },
-    //     (error) => {
-    //       console.log(error.text);
-    //     }
-    //   );
-    lineNotify();
+    emailjs
+      .sendForm(
+        "service_sok8e88",
+        "template_hpjke5x",
+        form.current,
+        "E-9bLDfRaR3ndrTQm"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          e.traget.reset();
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    // lineNotify();
   };
 
   const lineNotify = (text = '') => {
