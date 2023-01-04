@@ -22,6 +22,7 @@ const Contact = () => {
         (result) => {
           console.log(result.text);
           e.traget.reset();
+          location.reload();
         },
         (error) => {
           console.log(error.text);
