@@ -31,8 +31,8 @@ const Contact = () => {
   };
 
   const lineNotify = (text = '') => {
-    axios.post('http://localhost:3000/api/send_line', {
-      // axios.post('/send_line', {
+    // axios.post('http://localhost:3000/api/send_line', {
+      axios.post('/api/send_line', {
       text: `\n${form.current.name.value}\n${form.current.email.value}\n${form.current.message.value}`
     }).then(function (res) {
       
