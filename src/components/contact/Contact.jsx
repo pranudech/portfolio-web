@@ -10,7 +10,7 @@ const Contact = () => {
   const form = useRef();
 
   const sendEmail = (e) => {
-    // e.preventDefault();
+    e.preventDefault();
     // emailjs
     //   .sendForm(
     //     "service_sok8e88",
@@ -31,9 +31,6 @@ const Contact = () => {
   };
 
   const lineNotify = (text = '') => {
-    console.log('form.current :>> ', form.current.name.value);
-    console.log('form.current :>> ', form.current.email.value);
-    console.log('form.current :>> ', form.current.message.value);
     axios.post('http://localhost:3000/api/send_line', {
       // axios.post('/send_line', {
       text: `\n${form.current.name.value}\n${form.current.email.value}\n${form.current.message.value}`
