@@ -6,7 +6,7 @@ const Service = () => {
   return (
     <section id="service">
       <h5>EMPLOYMENT HISTORY</h5>
-      <h2>HISTORY</h2>
+      <h2>Work Experience</h2>
 
       <div className="container service__container">
         {/* 1 */}
