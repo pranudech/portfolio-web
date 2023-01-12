@@ -1,17 +1,25 @@
 import React from "react";
 import CTA from "./CTA";
 import HerderSocials from "./HerderSocials";
-import './header.css';
+import Typed from "react-typed";
+import "./header.css";
 
 const Header = () => {
   return (
     <header>
       <div className="container header__container">
         <h5>Hello I'm</h5>
-        <h1>Pranudech Reungwijit</h1>
+        {/* <h1>Pranudech Reungwijit</h1> */}
+        <Typed
+          className="md:text-5xl sm:text-4xl text-xl font-bold md:pl-4 pl-2"
+          strings={["Tom", "Pranudech \nReungwijit :)", "Hi"]}
+          typeSpeed={100}
+          backSpeed={10}
+          loop
+        />
         <h5 className="text-light">Fullstack Developer===</h5>
         <CTA />
-        <HerderSocials/>
+        <HerderSocials />
 
         <div className="me">
           <img src="assets/tom.png" alt="" />
