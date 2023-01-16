@@ -1,16 +1,19 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import "./contact.css";
 import { MdOutlineMail } from "react-icons/md";
 import { GoComment } from "react-icons/go";
 import { AiOutlinePhone } from "react-icons/ai";
 import emailjs from "@emailjs/browser";
-import axios from 'axios'
+import axios from "axios";
+import { Player, Controls } from "@lottiefiles/react-lottie-player";
 
 const Contact = () => {
   const form = useRef();
+  const [loading, setLoading] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setLoading(true);
     emailjs
       .sendForm(
         "service_sok8e88",
@@ -20,8 +23,7 @@ const Contact = () => {
       )
       .then(
         (result) => {
-          console.log(result.text);
-          e.traget.reset();
+          setLoading(false);
           window.location.reload();
         },
         (error) => {
@@ -31,14 +33,14 @@ const Contact = () => {
     // lineNotify();
   };
 
-  const lineNotify = (text = '') => {
+  const lineNotify = (text = "") => {
     // axios.post('http://localhost:3000/api/send_line', {
-      axios.post('/api/send_line', {
-      text: `\n${form.current.name.value}\n${form.current.email.value}\n${form.current.message.value}`
-    }).then(function (res) {
-      
-    });
-  }
+    axios
+      .post("/api/send_line", {
+        text: `\n${form.current.name.value}\n${form.current.email.value}\n${form.current.message.value}`,
+      })
+      .then(function (res) {});
+  };
 
   return (
     <section id="contact">
@@ -69,25 +71,39 @@ const Contact = () => {
           </article>
         </div>
 
-        <form ref={form} onSubmit={(e) => sendEmail(e)}>
-          <input
-            type="text"
-            name="name"
-            placeholder="Your Full Name"
-            required
+        {loading === true ? (
+          <Player
+            autoplay
+            loop
+            src="https://assets9.lottiefiles.com/datafiles/gUENLc1262ccKIO/data.json"
+            style={{ height: "250px", width: "250px" }}
           />
-          <input type="email" name="email" placeholder="Your Email" required />
-          <textarea
-            name="message"
-            row="7"
-            placeholder="Your Message"
-            required
-          />
-          <br />
-          <button type="submit" className="btn btn-primary">
-            Send Message
-          </button>
-        </form>
+        ) : (
+          <form ref={form} onSubmit={(e) => sendEmail(e)}>
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Full Name"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+            <textarea
+              name="message"
+              row="7"
+              placeholder="Your Message"
+              required
+            />
+            <br />
+            <button type="submit" className="btn btn-primary">
+              Send Message
+            </button>
+          </form>
+        )}
       </div>
     </section>
   );
