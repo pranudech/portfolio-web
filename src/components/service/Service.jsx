@@ -8,6 +8,17 @@ const Service = () => {
       <h5>EMPLOYMENT HISTORY</h5>
       <h2>Work Experience</h2>
 
+      {/* Create user interfaces with Reactjs and the technical component
+      Create RESTful APIs, integrate APIs with another service with Swagger API & Graphql
+      Improve and fix the systems that I am responsible for, making them efficient and accurate to use
+      Experience using GeoServer to create a web map service in a landmap project.
+      Developing software on and designing web application and web API service
+      Mentoring and coaching junior team
+      Project
+        Government attorney general
+        Department of lands 
+        Metropolitan Waterworks Authority - MWA  */}
+
       <div className="container service__container">
         {/* 1 */}
         <article className="service">
@@ -19,33 +30,38 @@ const Service = () => {
           <ul className="service__list">
             <li>
               <BiCheck className="service__list-icon" />
-              <p>Build user interfaces with Reactjs</p>
+              <p>Create user interfaces with Reactjs and the technical component</p>
             </li>
             <li>
               <BiCheck className="service__list-icon" />
               <p>
-                Build RESTful APIs, integrate APIs with another service with
-                Swagger API & Graphql
+              Create RESTful APIs, integrate APIs with another service with Swagger API & Graphql
               </p>
             </li>
             <li>
               <BiCheck className="service__list-icon" />
-              <p>Create the technical component of a frontend project</p>
+              <p>Improve and fix the systems that I am responsible for, making them efficient and accurate to use</p>
             </li>
             <li>
               <BiCheck className="service__list-icon" />
               <p>
-                ever done a project government attorney general, department of
-                lands, MWA
+              Experience using GeoServer to create a web map service in a landmap project.
               </p>
             </li>
             <li>
               <BiCheck className="service__list-icon" />
-              <p>Used to create a WMS using GeoServer in a landmap project</p>
+              <p>Developing software on and designing web application and web API service</p>
             </li>
             <li>
               <BiCheck className="service__list-icon" />
-              <p>Deploy project on Docker</p>
+              <p>Mentoring and coaching junior team</p>
+            </li>
+            <li>
+              <BiCheck className="service__list-icon" />
+              <p>Project
+        Government attorney general
+        Department of lands 
+        Metropolitan Waterworks Authority - MWA</p>
             </li>
           </ul>
         </article>
