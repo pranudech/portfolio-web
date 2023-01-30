@@ -12,12 +12,12 @@ const Header = () => {
         {/* <h1>Pranudech Reungwijit</h1> */}
         <Typed
           className="md:text-5xl sm:text-4xl text-xl font-bold md:pl-4 pl-2"
-          strings={["Tom", "Pranudech \nReungwijit :)", "Hi"]}
+          strings={["Tom", "Pranudech Reungwijit", ":)"]}
           typeSpeed={100}
           backSpeed={10}
           loop
         />
-        <h5 className="text-light">Fullstack Developer===</h5>
+        <h1 className="text-light">Frontend Developer</h1>
         <CTA />
         <HerderSocials />
 

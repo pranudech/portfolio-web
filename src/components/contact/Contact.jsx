@@ -60,7 +60,9 @@ const Contact = () => {
             <GoComment className="contact__option-icon" />
             <h4>Line</h4>
             <h5>pranudech</h5>
-            <a href="mailto:pranudech@gmail.com">Send a massage</a>
+            <a href="https://line.me/ti/p/S-G11NB8-X" target="_blank">
+              Add Line
+            </a>
           </article>
 
           <article className="contact__option">
