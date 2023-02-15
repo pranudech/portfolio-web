@@ -52,10 +52,10 @@ const Service = () => {
               <BiCheck className="service__list-icon" />
               <p>Developing software on and designing web application and web API service</p>
             </li>
-            {/* <li>
+            <li>
               <BiCheck className="service__list-icon" />
               <p>Mentoring and coaching junior team</p>
-            </li> */}
+            </li>
             <li>
               <BiCheck className="service__list-icon" />
               <p>Project
